@@ -11,3 +11,22 @@
     iframe.src = iframe.src;
   }
 
+
+  
+
+  const videoModal = document.getElementById('videoModal');
+   const iframe = document.getElementById('videoIframe');
+
+   // Load video when modal opens
+   videoModal.addEventListener('show.bs.modal', function (event) {
+     const button = event.relatedTarget;
+     const videoUrl = button.getAttribute('data-video');
+     if (!videoUrl) return;
+     const sep = videoUrl.includes('?') ? '&' : '?';
+     iframe.src = videoUrl + sep + 'autoplay=1';
+   });
+
+   // Stop video when modal closes
+   videoModal.addEventListener('hidden.bs.modal', function () {
+     iframe.src = '';
+   });

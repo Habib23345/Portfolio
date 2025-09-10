@@ -11731,10 +11731,18 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
-  
-  .card-img-top,
-  .embed-responsive{
-  height:350px;
-  object-fit:cover;
-  }
+ button.btn.rounded-circle {
+  font-size: 2rem;
+  padding: 10px 15px;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+button.btn.rounded-circle:hover {
+  opacity: 1;
+}
+
+  /* bigger circle, subtle hover */
+  .btn.rounded-circle { font-size: 1.5rem; padding: 0.6rem 0.8rem; opacity: 0.95; }
+  .btn.rounded-circle:hover { opacity: 1; transform: translateY(-1px); transition: .15s; }
 }
