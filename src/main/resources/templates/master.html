@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title th:text="'My Portfolio - '+${title}"></title>
+        <!--Standard Favicon-->
+        <link rel="icon" sizes="16*16" type="image/png" href="assets/images/favicons/favicon-16*16.png" />
+        <link rel="icon" sizes="32*32" type="image/png" href="assets/images/favicons/favicon-32*32.png" />
+        
+         <!--Android Favicon-->
+        <link rel="icon" sizes="192*192" type="image/png" href="assets/images/favicons/android-chrome-192*192.png" />
+        <link rel="icon" sizes="512*512" type="image/png" href="assets/images/favicons/android-chrome-512*512.png" />
+        
+         <!--Apple Touch Favicon-->
+        <link rel="icon" sizes="180*180" type="image/png" href="assets/images/favicons/apple-touch-icon.png" />
+        
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="assets/css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+           <!-- Navigation -->
+           <div th:insert="menu :: menu"></div>
+
+<div th:if="${title == 'Home'}">
+<div th:insert="home :: home"></div>
+</div>
+
+<div th:if="${title == 'Contact'}">
+<div th:insert="contact :: contact"></div>
+</div>
+
+<div th:if="${title == 'Projects'}">
+<div th:insert="projects :: projects"></div>
+</div>
+
+<div th:if="${title == 'Resume'}">
+<div th:insert="resume :: resume"></div>
+</div>
+
+       <!-- About Section-->
+            <section class="bg-light py-5 ">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xxl-8">
+                            <div class="text-center my-5">
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
+                                <p class="lead fw-light mb-4">My name is Muhammad Habib and I help brands to grow.</p>
+                                <p class="text-muted">Creative and disciplined Full-Stack Developer with strong command of Spring Boot and modern front-end tools. Also a UI/UX professional designer, prompt engineer, and SEO strategist — a rare blend of engineering and creativity. Known for turning complex ideas into clear, scalable solutions and for designing experiences that connect deeply with users. Currently working on AI-driven projects that explore areas where even the largest companies have not yet delivered.</p>
+                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                   
+                                    <a class="text-gradient" href="#"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         </section>
+
+        </main>
+       <!-- footer -->
+         <div th:insert="footer :: footer"></div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="assts/js/scripts.js"></script>
+    </body>
+</html>

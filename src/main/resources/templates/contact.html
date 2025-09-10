@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+   <head>
+    </head>
+    <body>
+            <!-- Page content-->
+            <section class="py-5" th:fragment="contact">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                        <div class="text-center mb-5">
+                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                            <h1 class="fw-bolder">Get in touch</h1>
+                            <p class="lead fw-normal text-muted mb-0">Let's work together!
+                            </p>
+                            <p class="lead fw-normal text-muted mb-0">You can contact me with below informations!</p>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- * * SB Forms Contact Form * *-->
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- This form is pre-integrated with SB Forms.-->
+                                <!-- To make this form functional, sign up at-->
+                                <!-- https://startbootstrap.com/solution/contact-forms-->
+                                <!-- to get an API token!-->
+                                   <!-- My Name (display box) -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">My Name</label>
+          <input
+            type="text"
+            class="form-control"
+            readonly
+            disabled
+            th:value="${name} ?: 'Muhammad Habib'" />
+        </div>
+
+        <!-- My Email (display box) -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">My Email</label>
+          <input
+            type="text"
+            class="form-control"
+            readonly
+            disabled
+            th:value="${email} ?: 'bangashhabib7@gmail.com'" />
+        </div>
+
+        <!-- Contact Number (display box) -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Contact Number</label>
+          <input
+            type="text"
+            class="form-control"
+            readonly
+            disabled
+            th:value="${phone} ?: '+92-3359888355    (phone / WhatsApp)'" />
+        </div>
+
+        <!-- Thankgiving / Message (display textarea-style box) -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Contact Hint</label>
+          <textarea
+            class="form-control"
+            rows="2"
+            readonly
+            disabled
+            th:text="${thanksMessage} ?: 'You can contact with me on whatsapp with my phone and in message just write Muhammad Habib is there!!'"></textarea>
+        </div>
+        <div class="container text-center">
+        <button class=" btn btn-primary text-center">Thanks To Have You</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </body>
+</html>
